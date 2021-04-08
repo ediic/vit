@@ -145,14 +145,16 @@
           </header>
 
           <main class="flex-1">
-            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-              <!-- Replace with your content -->
-              <div class="px-4 py-6 sm:px-0">
-                <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-              </div>
-              <!-- /End replace -->
+            {{-- <div class="max-w-full border-2 border-black">
+                <div class="p-1">
+                    <img class="object-cover w-full" src="{{ asset('storage/vit.jpg') }}">
+                </div>
+            </div> --}}
+            <div class="flex flex-wrap justify-center">
+                <div class=" px-4">
+                    <img src="{{ asset('storage/vit.jpg') }}"class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                </div>
             </div>
-
           </main>
 
            {{--  <hr class="border-b m-0" /> --}}
