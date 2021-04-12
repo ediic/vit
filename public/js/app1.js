@@ -1,8 +1,3 @@
-require('./bootstrap');
-
-require('alpinejs');
-
-document.getElementById("show-hide").addEventListener ("click", showHide);
 function showHide() {
     const x = document.getElementById("mobile-menu");
     const y = document.getElementById("cross-icon");
