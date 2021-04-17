@@ -26,7 +26,20 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                            <a href="{{ url('/') }}" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <!-- This is an example component -->
+                            <div id="box-menu" class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
+                                <span>Contacte</span>
+                                <svg class="h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                                <div id="items-menu" class="absolute mt-1 left-0 top-full min-w-max shadow rounded bg-gray-100 border border-gray-400 transition delay-75 ease-in-out z-10 opacity-0">
+                                    <ul class="block text-gray-600">
+                                        <li class="px-3 py-2">Chisinau, str.Sarmizegeduza 28/1</li>
+                                        <li class="px-3 py-2">tel.067573620</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <a href="#" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Autocamioanele noastre</a>
                         </div>
                     </div>
@@ -113,8 +126,8 @@
                     </div>
                 </div> --}}
                 <div class="">
-                    <div class="w-2/3 mx-auto px-4 mt-2">
-                        <img src="{{ asset('storage/vit.jpg') }}"class="shadow-lg rounded w-full h-auto border-none" />
+                    <div class="max-w-7xl mx-auto my-2 rounded-lg shadow-lg overflow-hidden">
+                        <img src="{{ asset('storage/vit.jpg') }}"class="w-full h-auto border-none" />
                     </div>
                 </div>
             </main>
@@ -123,6 +136,13 @@
             <footer class="bg-gray-100 text-gray-600 text-sm font-medium border-t p-4 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>
             </footer>
-        </div>   
+        </div>
+        <script type="text/javascript">
+            document.getElementById("box-menu").addEventListener ("click", boxMenu);
+            function boxMenu() {
+                const x = document.getElementById("items-menu");
+                x.classList.toggle("opacity-0");
+            }            
+        </script>   
     </body>
 </html>

@@ -3820,6 +3820,13 @@ function showHide() {
   }
 }
 
+document.getElementById("box-menu").addEventListener("click", boxMenu);
+
+function boxMenu() {
+  var x = document.getElementById("items-menu");
+  x.classList.toggle(hidden);
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
