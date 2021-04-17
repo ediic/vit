@@ -37,6 +37,7 @@
                                     <ul class="block text-gray-600">
                                         <li class="px-3 py-2">Chisinau, str.Sarmizegeduza 28/1</li>
                                         <li class="px-3 py-2">tel.067573620</li>
+                                        <li class="px-3 py-2">service@mail.md</li>
                                     </ul>
                                 </div>
                             </div>
@@ -130,19 +131,43 @@
                         <img src="{{ asset('storage/vit.jpg') }}"class="w-full h-auto border-none" />
                     </div>
                 </div>
+
+            <!-- form -->
+            <div class="p-5 max-w-xl">
+                <div class="mt-8 p-4">
+                    <div>
+                        <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3">Full Name</div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="w-full flex-1 mx-2 svelte-1l8159u">
+                                <div class="bg-white my-2 p-1 flex border border-gray-200 rounded svelte-1l8159u">
+                                    <input placeholder="First Name" class="p-1 px-2 appearance-none outline-none w-full text-gray-800"> </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="w-full mx-2 flex-1 svelte-1l8159u">
+                                <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Username</div>
+                                <div class="bg-white my-2 p-1 flex border border-gray-200 rounded svelte-1l8159u">
+                                    <input placeholder="Just a hint.." class="p-1 px-2 appearance-none outline-none w-full text-gray-800"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex p-2 mt-4">
+                        <button class="text-base hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer 
+                        hover:bg-gray-200  
+                        bg-gray-100 
+                        text-gray-700 
+                        border duration-200 ease-in-out 
+                        border-gray-600 transition">Previous</button>
+                    </div>
+                </div>
+            </div>
+
             </main>
 
            {{--  <hr class="border-b m-0" /> --}}
             <footer class="bg-gray-100 text-gray-600 text-sm font-medium border-t p-4 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>
             </footer>
-        </div>
-        <script type="text/javascript">
-            document.getElementById("box-menu").addEventListener ("click", boxMenu);
-            function boxMenu() {
-                const x = document.getElementById("items-menu");
-                x.classList.toggle("opacity-0");
-            }            
-        </script>   
+        </div>   
     </body>
 </html>
