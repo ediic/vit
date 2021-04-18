@@ -126,46 +126,41 @@
                         <img class="object-cover w-full" src="{{ asset('storage/vit.jpg') }}">
                     </div>
                 </div> --}}
-                <div class="">
-                    <div class="max-w-7xl mx-auto my-2 rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('storage/vit.jpg') }}"class="w-full h-auto border-none" />
+                <div class="flex max-w-7xl m-auto">
+                    
+                    <div class="">
+                        <div class="max-w-4xl mx-auto my-2 rounded-lg shadow-lg overflow-hidden">
+                            <img src="{{ asset('storage/vit.jpg') }}"class="w-full h-auto border-none" />
+                        </div>
                     </div>
-                </div>
 
-            <!-- form -->
-            <div class="p-5 max-w-xl">
-                <div class="mt-8 p-4">
-                    <div>
-                        <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3">Full Name</div>
-                        <div class="flex flex-col md:flex-row">
-                            <div class="w-full flex-1 mx-2 svelte-1l8159u">
-                                <div class="bg-white my-2 p-1 flex border border-gray-200 rounded svelte-1l8159u">
-                                    <input placeholder="First Name" class="p-1 px-2 appearance-none outline-none w-full text-gray-800"> </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row">
-                            <div class="w-full mx-2 flex-1 svelte-1l8159u">
-                                <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Username</div>
-                                <div class="bg-white my-2 p-1 flex border border-gray-200 rounded svelte-1l8159u">
-                                    <input placeholder="Just a hint.." class="p-1 px-2 appearance-none outline-none w-full text-gray-800"> </div>
-                            </div>
+                    <!-- component -->
+                    <div class="bg-white w-96 ml-2 my-10 shadow-md">
+                        <div class="py-8 px-8 rounded-xl">
+                            <h1 class="font-medium text-2xl mt-3 text-center">Login</h1>
+                            <form action="" class="mt-6">
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Username</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Username" />
+                                </div>
+                                <div class="my-5 text-sm">
+                                    <label for="password" class="block text-black">Password</label>
+                                    <input type="password" id="password" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Password" />
+                                    <div class="flex justify-start mt-2 text-xs text-gray-600">
+                                        <span class="text-red-500">Forget Password</span>
+                                    </div>
+                                </div>
+                                <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Login</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="flex p-2 mt-4">
-                        <button class="text-base hover:scale-110 focus:outline-none flex justify-center px-4 py-2 rounded font-bold cursor-pointer 
-                        hover:bg-gray-200  
-                        bg-gray-100 
-                        text-gray-700 
-                        border duration-200 ease-in-out 
-                        border-gray-600 transition">Previous</button>
-                    </div>
+
                 </div>
-            </div>
 
             </main>
 
            {{--  <hr class="border-b m-0" /> --}}
-            <footer class="bg-gray-100 text-gray-600 text-sm font-medium border-t p-4 text-center">
+            <footer class="bg-gray-200 text-gray-600 text-sm font-medium border-t p-5 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>
             </footer>
         </div>   
