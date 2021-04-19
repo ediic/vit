@@ -126,31 +126,47 @@
                         <img class="object-cover w-full" src="{{ asset('storage/vit.jpg') }}">
                     </div>
                 </div> --}}
-                <div class="flex max-w-7xl m-auto">
+                <div class="flex items-center max-w-7xl h-full mx-auto">
                     
-                    <div class="">
-                        <div class="max-w-4xl mx-auto my-2 rounded-lg shadow-lg overflow-hidden">
-                            <img src="{{ asset('storage/vit.jpg') }}"class="w-full h-auto border-none" />
-                        </div>
+                    <div class="max-w-4xl h-3/4 rounded-lg shadow-lg overflow-hidden">
+                        <img src="{{ asset('storage/vit.jpg') }}"class="border-none w-full h-full"/>
                     </div>
 
                     <!-- component -->
-                    <div class="bg-white w-96 ml-2 my-10 shadow-md">
+                    <div class="bg-white w-96 ml-2 mt-2 shadow-md">
                         <div class="py-8 px-8 rounded-xl">
-                            <h1 class="font-medium text-2xl mt-3 text-center">Login</h1>
+                            <h1 class="font-medium text-2xl text-center">Comanda transport</h1>
                             <form action="" class="mt-6">
                                 <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Username</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Username" />
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="password" class="block text-black">Password</label>
-                                    <input type="password" id="password" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Password" />
+                                    <label for="username" class="block text-black">Nume</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Nume" />
                                     <div class="flex justify-start mt-2 text-xs text-gray-600">
                                         <span class="text-red-500">Forget Password</span>
                                     </div>
                                 </div>
-                                <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Login</button>
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Locatia</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Locatia" />
+                                </div>
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Destinatia</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Destinatia" />
+                                </div>
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Telefon</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Telefon" />
+                                </div>
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Email</label>
+                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Email" />
+                                </div>
+                                <div class="my-5 text-sm">
+                                    <label for="username" class="block text-black">Mesaj</label>
+                                    <textarea type="textarea" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full text-gray-500">
+                                        
+                                    </textarea>
+                                </div>
+                                <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Expediaza</button>
                             </form>
                         </div>
                     </div>
