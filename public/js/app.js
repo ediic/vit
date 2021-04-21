@@ -3802,6 +3802,31 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
+document.getElementById("show-hide").addEventListener("click", showHide);
+
+function showHide() {
+  var x = document.getElementById("mobile-menu");
+  var y = document.getElementById("cross-icon");
+  var z = document.getElementById("burger-icon");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "block";
+    z.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+  }
+}
+
+document.getElementById("box-menu").addEventListener("click", boxMenu);
+
+function boxMenu() {
+  var x = document.getElementById("items-menu");
+  x.classList.toggle("opacity-0");
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
