@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CommandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ Route::get('/', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 });
+
+Route::post('/command/store', [CommandController::class, 'store']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
