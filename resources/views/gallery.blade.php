@@ -41,7 +41,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="{{ url('/gallery') }}" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Autocamioanele noastre</a>
+                            <a href="#" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Autocamioanele noastre</a>
                         </div>
                     </div>
                 </div>
@@ -112,66 +112,26 @@
             </div>
           </nav>
 
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <h1 class="text-3xl font-bold text-gray-900 text-center">
-                        Servicii auto de transport intern si international
-                    </h1>
-                </div>
-            </header>
-
             <main class="flex-1">
-                {{-- <div class="max-w-full border-2 border-black">
-                    <div class="p-1">
-                        <img class="object-cover w-full" src="{{ asset('storage/vit.jpg') }}">
-                    </div>
-                </div> --}}
-                <div class="flex flex-col md:flex-row items-center max-w-7xl h-full mx-auto">
-                    
-                    <div class="w-3/4 h-3/4 rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('storage/vit.jpg') }}"class="border-none w-full h-full"/>
-                    </div>
+                <div class="px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
 
-                    <!-- component -->
-                    <div class="bg-white w-96 ml-2 mt-2 shadow-md">
-                        <div class="py-8 px-8 rounded-xl">
-                            <h1 class="font-medium text-2xl text-center">Comanda transport</h1>
-                            <form action="" class="mt-6">
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Nume</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Nume" />
-                                    <div class="flex justify-start mt-2 text-xs text-gray-600">
-                                        <span class="text-red-500">Forget Password</span>
-                                    </div>
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Locatia</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Locatia" />
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Destinatia</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Destinatia" />
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Telefon</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Telefon" />
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Email</label>
-                                    <input type="text" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Email" />
-                                </div>
-                                <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Mesaj</label>
-                                    <textarea type="textarea" autofocus id="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full text-gray-500">
-                                        
-                                    </textarea>
-                                </div>
-                                <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Expediaza</button>
-                            </form>
+                    <!-- hero -->
+                    <div class="hero">
+                        <!-- hero headline -->
+                        <div class="hero-headline flex flex-col items-center justify-center pt-10 text-center">
+                            <h1 class=" font-bold text-3xl text-gray-900">Va oferim servicii calitative</h1>
+                            <p class=" font-base text-base text-gray-600">rapid si comod.</p>
                         </div>
-                    </div>
+                        
+                        <section id="photos" class="max-w-7xl my-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+                            <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+                            <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+                            <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+                        </section>
 
-                </div>
+                    </div>
+                </div>                
 
             </main>
 
@@ -179,6 +139,6 @@
             <footer class="bg-gray-200 text-gray-600 text-sm font-medium border-t p-5 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>
             </footer>
-        </div>   
+        </div>  
     </body>
 </html>
