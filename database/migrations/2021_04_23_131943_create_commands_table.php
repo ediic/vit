@@ -15,6 +15,12 @@ class CreateCommandsTable extends Migration
     {
         Schema::create('commands', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('location');
+            $table->string('destination');
+            $table->integer('phone');
+            $table->string('email');
+            $table->mediumText('message');
             $table->timestamps();
         });
     }

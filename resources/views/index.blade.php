@@ -120,6 +120,25 @@
                 </div>
             </header>
 
+            @if (session('status'))
+                <div class="flex justify-center bg-green-100 rounded-md p-2 ">
+                    <div class="flex items-center">
+                        <svg
+                            class="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round">
+                            <path d="M0 0h24v24H0z" stroke="none" />
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+
+                        <div class="text-green-700">
+                            <div class="font-bold text-xl">{{ session('status') }}</div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <main class="flex-1">
                 {{-- <div class="max-w-full border-2 border-black">
                     <div class="p-1">
@@ -139,8 +158,8 @@
                             <form method="POST" action="/command/store" class="mt-6">
                                 @csrf
                                 <div class="my-5 text-sm">
-                                    <label for="username" class="block text-black">Nume</label>
-                                    <input type="text" autofocus name="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Nume" />
+                                    <label for="username" class="block text-black">Nume<span class="text-red-400"> *</span></label>
+                                    <input type="text" autofocus name="username" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" value="{{ old('username') }}" placeholder="Nume" />
                                     @error('username')
                                         <div class="flex justify-start mt-2 text-xs">
                                             <span class="text-red-500">{{ $message }}</span>
@@ -148,8 +167,8 @@
                                     @enderror
                                 </div>
                                 <div class="my-5 text-sm">
-                                    <label for="location" class="block text-black">Locatia</label>
-                                    <input type="text" autofocus name="location" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Locatia" />
+                                    <label for="location" class="block text-black">Locatia<span class="text-red-400"> *</span></label>
+                                    <input type="text" autofocus name="location" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" value="{{ old('location') }}" placeholder="Locatia" />
                                     @error('location')
                                         <div class="flex justify-start mt-2 text-xs">
                                             <span class="text-red-500">{{ $message }}</span>
@@ -157,8 +176,8 @@
                                     @enderror
                                 </div>
                                 <div class="my-5 text-sm">
-                                    <label for="destination" class="block text-black">Destinatia</label>
-                                    <input type="text" autofocus name="destination" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Destinatia" />
+                                    <label for="destination" class="block text-black">Destinatia<span class="text-red-400"> *</span></label>
+                                    <input type="text" autofocus name="destination" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" value="{{ old('destination') }}" placeholder="Destinatia" />
                                     @error('destination')
                                         <div class="flex justify-start mt-2 text-xs">
                                             <span class="text-red-500">{{ $message }}</span>
@@ -166,8 +185,8 @@
                                     @enderror
                                 </div>
                                 <div class="my-5 text-sm">
-                                    <label for="phone" class="block text-black">Telefon</label>
-                                    <input type="text" autofocus name="phone" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Telefon" />
+                                    <label for="phone" class="block text-black">Telefon<span class="text-red-400"> *</span></label>
+                                    <input type="text" autofocus name="phone" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" value="{{ old('phone') }}" placeholder="Telefon" />
                                     @error('phone')
                                         <div class="flex justify-start mt-2 text-xs">
                                             <span class="text-red-500">{{ $message }}</span>
@@ -176,7 +195,7 @@
                                 </div>
                                 <div class="my-5 text-sm">
                                     <label for="email" class="block text-black">Email</label>
-                                    <input type="text" autofocus name="email" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" placeholder="Email" />
+                                    <input type="text" autofocus name="email" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full" value="{{ old('email') }}" placeholder="Email" />
                                     @error('email')
                                         <div class="flex justify-start mt-2 text-xs">
                                             <span class="text-red-500">{{ $message }}</span>
@@ -185,8 +204,7 @@
                                 </div>
                                 <div class="my-5 text-sm">
                                     <label for="message" class="block text-black">Mesaj</label>
-                                    <textarea type="textarea" autofocus name="message" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full text-gray-500">
-                                    </textarea>
+                                    <textarea type="textarea" name="message" class="rounded-sm px-4 py-3 mt-1 focus:outline-none bg-gray-100 w-full text-black" rows="1" placeholder="Mesaj">{{ old('message') }}</textarea>
                                 </div>
                                 <button class="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Expediaza</button>
                             </form>
