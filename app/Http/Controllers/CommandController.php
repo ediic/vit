@@ -22,4 +22,10 @@ class CommandController extends Controller
 
    		return back()->with('status', 'Comanda a fost plasata cu succes');
    }
+
+   public function index()
+   {
+
+   		return view('command_index', ['commands' => Command::all()]);
+   }
 }

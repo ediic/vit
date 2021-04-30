@@ -24,6 +24,7 @@ Route::get('/gallery', function () {
 });
 
 Route::post('/command/store', [CommandController::class, 'store']);
+Route::get('/command/index', [CommandController::class, 'index']);
 
 
 Route::get('/dashboard', function () {

@@ -2,6 +2,7 @@ require('./bootstrap');
 
 require('alpinejs');
 
+// burger menu
 document.getElementById("show-hide").addEventListener ("click", showHide);
 function showHide() {
     const x = document.getElementById("mobile-menu");
@@ -18,8 +19,24 @@ function showHide() {
     }
 }
 
+//contacts items
 document.getElementById("box-menu").addEventListener ("click", boxMenu);
 function boxMenu() {
     const x = document.getElementById("items-menu");
     x.classList.toggle("opacity-0");
 }
+
+//modal show-hide
+const modal = document.querySelector('.modal');
+const showModal = document.querySelector('.show-modal');
+const closeModal = document.querySelectorAll('.close-modal');
+
+showModal.addEventListener('click', function (){
+    modal.classList.remove('hidden')
+});
+
+closeModal.forEach(close => {
+    close.addEventListener('click', function (){
+        modal.classList.add('hidden')
+    });
+});
