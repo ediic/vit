@@ -19,24 +19,37 @@ function showHide() {
     }
 }
 
+
 //contacts items
-document.getElementById("box-menu").addEventListener ("click", boxMenu);
+document.querySelector("#box-menu").addEventListener ("click", boxMenu);
 function boxMenu() {
     const x = document.getElementById("items-menu");
     x.classList.toggle("opacity-0");
 }
 
+
 //modal show-hide
-const modal = document.querySelector('.modal');
-const showModal = document.querySelector('.show-modal');
-const closeModal = document.querySelectorAll('.close-modal');
+const modal = document.querySelectorAll('.modal-item');
+const modalOpen = document.querySelector('.modal-open');
 
-showModal.addEventListener('click', function (){
-    modal.classList.remove('hidden')
-});
+document.querySelectorAll('.show-modal').forEach(element => {element.addEventListener('click', open)});
+document.querySelectorAll('.modal-close').forEach(element => {element.addEventListener('click', close)});
+  
+function open(event) {
+    let command = event.target.parentElement.parentElement.id;
+    command = JSON.parse(command);
+    
+    modal[0].innerHTML = command.username;
+    modal[1].innerHTML = command.location;
+    modal[2].innerHTML = command.destination;
+    modal[3].innerHTML = command.phone;
+    modal[4].innerHTML = command.email;
+    modal[5].innerHTML = command.message;
 
-closeModal.forEach(close => {
-    close.addEventListener('click', function (){
-        modal.classList.add('hidden')
-    });
-});
+    modalOpen.classList.remove('hidden');
+};
+
+function close() {
+    modalOpen.classList.add('hidden');
+};
+

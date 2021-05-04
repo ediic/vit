@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-        {{-- <script src="{{ asset('js/app1.js') }}" defer></script> --}}
+        <script src="{{ asset('js/app1.js') }}" defer></script>
     </head>
 
     <body class="antialiased">
@@ -28,11 +28,13 @@
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a href="{{ url('/') }}" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                             <!-- This is an example component -->
-                            <div id="box-menu" class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
+                            <div class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                              <div id="box-menu" class="cursor-pointer">  
                                 <span>Contacte</span>
                                 <svg class="h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
+                              </div> 
                                 <div id="items-menu" class="absolute mt-1 left-0 top-full min-w-max shadow rounded bg-gray-100 border border-gray-400 transition delay-75 ease-in-out z-10 opacity-0">
                                     <ul class="block text-gray-600">
                                         <li class="px-3 py-2">Chisinau, str.Sarmizegeduza 28/1</li>
@@ -112,84 +114,26 @@
             </div>
           </nav>
 
-          <main class="flex-1">
-              <!-- modal -->
-            <div class="modal hidden fixed w-full inset-0 overflow-y-auto bg-gray-600 bg-opacity-40">
-              <div class="border border-blue-500 shadow-lg modal-container bg-white w-4/12 md:max-w-11/12 mx-auto rounded-xl shadow-lg">
-                <div class="modal-content py-4 text-left px-6">
-                  <!--Title-->
-                  <div class="flex justify-between items-center pb-3">
-                    <p class="text-2xl font-bold text-gray-500">Add Caretaker</p>
-                    <div class="modal-close cursor-pointer z-50 close-modal">
-                      <svg class="fill-current text-gray-500" width="18" height="18"
-                        viewBox="0 0 18 18">
-                        <path
-                          d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                        </path>
+          @if (session('status'))
+              <div class="flex justify-center bg-green-100 rounded-md p-2 ">
+                  <div class="flex items-center">
+                      <svg
+                          class="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round">
+                          <path d="M0 0h24v24H0z" stroke="none" />
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M9 12l2 2 4-4" />
                       </svg>
-                    </div>
+
+                      <div class="text-green-700">
+                          <div class="font-bold text-xl">{{ session('status') }}</div>
+                      </div>
                   </div>
-                  <!--Body-->
-                  <div class="my-5 mr-5 ml-5 flex justify-center">
-                    <div id="add_caretaker_form" class="w-full">
-                      <div class="">
-                        <label class="text-md text-gray-600">Numele</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Locatia</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Destinatia</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Telefon</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Email</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Mesaj</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Mesaj</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                      <div class="">
-                        <label class="text-md text-gray-600">Mesaj</label>
-                      </div>
-                      <div class="p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
-                        <span>Numele</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!--Footer-->
-                  <div class="flex justify-end pt-2 space-x-14">
-                    <button
-                      class="px-4 bg-gray-200 p-3 rounded text-black hover:bg-gray-300 font-semibold close-modal ">Close</button>
-                  </div>
-                </div>
               </div>
-            </div>
+          @endif          
+
+          <main class="flex-1">
 
             <p class="text-lg text-center font-bold m-5">Comenzile primite</p>
             <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
@@ -211,52 +155,100 @@
                 <td class="px-4 py-3">{{$command->email}}</td>
                 <td class="px-4 py-3">{{$command->message}}</td>
                 <td class="px-4 py-3">
-                  <div class="flex item-center justify-center">
-                      <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 show-modal cursor-pointer">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
+                  <div id="{{$command}}" class="flex item-center justify-center">
+                      <div id="{{$command}}" class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 show-modal cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
                       </div>
-                      <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 cursor-pointer">
+                      <form action="{{ route('commands.destroy', $command->id) }}" method="POST">
+                        @csrf
+                        @method("DELETE")
+                        <button type="submit">
+                        <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 cursor-pointer">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                           </svg>
-                      </div>
-                      <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 cursor-pointer">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                          </svg>
+                        </div>
+                        </button>                        
+                      </form>                      
+                      <div class="transform hover:scale-110">
+                        {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                        </svg> --}}
+                        <input type="checkbox" name="check" class="w-4 mr-2 cursor-pointer text-green-600">
                       </div>
                   </div>
                 </td>
               </tr>
-              @endforeach
-            </table>
+            @endforeach
+            </table> 
+              <!-- modal -->
+              <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40">
+                <div class="border border-blue-500 shadow-lg modal-container bg-white w-4/12 md:max-w-11/12 mx-auto rounded-xl shadow-lg my-5">
+                  <div class="modal-content py-4 text-left px-6">
+                    <!--Title-->
+                    <div class="flex justify-between items-center pb-3">
+                      <p class="text-2xl font-bold text-gray-500">Vizualizare</p>
+                      <div class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-gray-500" width="18" height="18"
+                          viewBox="0 0 18 18">
+                          <path
+                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <!--Body-->
+                    <div class="my-5 mr-5 ml-5 flex justify-center">
+                      <div id="add_caretaker_form" class="w-full">
+                        <div class="">
+                          <label class="text-md text-gray-600">Numele</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                        <div class="">
+                          <label class="text-md text-gray-600">Locatia</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                        <div class="">
+                          <label class="text-md text-gray-600">Destinatia</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                        <div class="">
+                          <label class="text-md text-gray-600">Telefon</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                        <div class="">
+                          <label class="text-md text-gray-600">Email</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                        <div class="">
+                          <label class="text-md text-gray-600">Mesaj</label>
+                        </div>
+                        <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                        </div>
+                      </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="flex justify-end pt-2 space-x-14">
+                      <button
+                        class="modal-close px-4 bg-gray-200 p-3 rounded text-black hover:bg-gray-300 font-semibold">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </main>
 
            {{--  <hr class="border-b m-0" /> --}}
             <footer class="bg-gray-200 text-gray-600 text-sm font-medium border-t p-5 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>
             </footer>
-            <script type="text/javascript">
-              const modal = document.querySelector('.modal');
-
-              const showModal = document.querySelector('.show-modal');
-              const closeModal = document.querySelectorAll('.close-modal');
-
-              showModal.addEventListener('click', function (){
-                modal.classList.remove('hidden')
-              });
-
-              //setTimeout(() => showTimer(), 1000000);
-
-              closeModal.forEach(close => {
-                close.addEventListener('click', function (){
-                  modal.classList.add('hidden')
-                });
-              });                  
-            </script>
         </div>  
     </body>
 </html>

@@ -24,7 +24,8 @@ Route::get('/gallery', function () {
 });
 
 Route::post('/command/store', [CommandController::class, 'store']);
-Route::get('/command/index', [CommandController::class, 'index']);
+Route::get('/command/index', [CommandController::class, 'index'])->name('commands.index');
+Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->name('commands.destroy');
 
 
 Route::get('/dashboard', function () {

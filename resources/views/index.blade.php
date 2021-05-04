@@ -28,11 +28,13 @@
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a href="{{ url('/') }}" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                             <!-- This is an example component -->
-                            <div id="box-menu" class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
+                            <div class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                              <div id="box-menu" class="cursor-pointer">  
                                 <span>Contacte</span>
                                 <svg class="h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
+                              </div>
                                 <div id="items-menu" class="absolute mt-1 left-0 top-full min-w-max shadow rounded bg-gray-100 border border-gray-400 transition delay-75 ease-in-out z-10 opacity-0">
                                     <ul class="block text-gray-600">
                                         <li class="px-3 py-2">Chisinau, str.Sarmizegeduza 28/1</li>
