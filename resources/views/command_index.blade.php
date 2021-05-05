@@ -6,6 +6,12 @@
 
         <title>VitTransServ</title>
 
+        <style>
+          input:checked + svg {
+            display: block;
+          }
+        </style> 
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
          <!-- Styles -->
@@ -155,14 +161,14 @@
                 <td class="px-4 py-3">{{$command->email}}</td>
                 <td class="px-4 py-3">{{$command->message}}</td>
                 <td class="px-4 py-3">
-                  <div id="{{$command}}" class="flex item-center justify-center">
+                  <div id="{{$command}}" class="flex items-center justify-center">
                       <div id="{{$command}}" class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 show-modal cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                         </svg>
                       </div>
-                      <form action="{{ route('commands.destroy', $command->id) }}" method="POST">
+                      <form action="{{ route('commands.destroy', $command->id) }}" method="POST" class="flex items-center">
                         @csrf
                         @method("DELETE")
                         <button type="submit">
@@ -173,11 +179,9 @@
                         </div>
                         </button>                        
                       </form>                      
-                      <div class="transform hover:scale-110">
-                        {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
-                        </svg> --}}
-                        <input type="checkbox" name="check" class="w-4 mr-2 cursor-pointer text-green-600">
+                      <div class="bg-white border-2 rounded border-gray-400 w-4 h-4 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500 transform hover:scale-105">
+                          <input type="checkbox" value="check" name="type" class="opacity-0 absolute cursor-pointer" @if($command->checked) checked @endif>
+                          <svg class="fill-current hidden w-3 h-3 text-green-500" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
                       </div>
                   </div>
                 </td>
@@ -245,6 +249,11 @@
               </div>
           </main>
 
+  <div class="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
+    <input type="checkbox" class="opacity-0 absolute">
+    <svg class="fill-current hidden w-4 h-4 text-green-500" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+  </div>
+         
            {{--  <hr class="border-b m-0" /> --}}
             <footer class="bg-gray-200 text-gray-600 text-sm font-medium border-t p-5 text-center">
                 <h3>Copyright &copy; {{ date('Y') }} Vit Trans Service</h3>

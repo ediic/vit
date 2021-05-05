@@ -26,7 +26,7 @@ Route::get('/gallery', function () {
 Route::post('/command/store', [CommandController::class, 'store']);
 Route::get('/command/index', [CommandController::class, 'index'])->name('commands.index');
 Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->name('commands.destroy');
-
+Route::put('/commands/{id}', [CommandController::class, 'update'])->name('commands.update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

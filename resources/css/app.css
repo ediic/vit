@@ -6,3 +6,8 @@
 body {
     font-family: 'Nunito', sans-serif;
 }
+
+
+input:checked + svg {
+display: block;
+}

@@ -21,6 +21,7 @@ class CreateCommandsTable extends Migration
             $table->integer('phone');
             $table->string('email');
             $table->mediumText('message');
+            $table->boolean('checked')->default(false);
             $table->timestamps();
         });
     }
