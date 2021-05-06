@@ -39,4 +39,14 @@ class CommandController extends Controller
       return redirect(route('commands.index'));
    }
 
+
+   public function update(Command $command, Request $request)
+   {  
+      $checked = $request->check ?? 0;
+      $command->checked = $checked;
+      $command->save();
+
+      return redirect(route('commands.index'));      
+   }
+
 }

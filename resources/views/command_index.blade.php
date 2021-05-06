@@ -178,11 +178,15 @@
                           </svg>
                         </div>
                         </button>                        
-                      </form>                      
-                      <div class="bg-white border-2 rounded border-gray-400 w-4 h-4 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500 transform hover:scale-105">
-                          <input type="checkbox" value="check" name="type" class="opacity-0 absolute cursor-pointer" @if($command->checked) checked @endif>
+                      </form>
+                      <form id="checked-{{ $command->id }}" action="{{ route('commands.update', $command) }}" method="POST" class="flex items-center">
+                      @csrf
+                      @method("PUT")                                            
+                        <div class="bg-white border-2 rounded border-gray-400 w-4 h-4 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500 transform hover:scale-105">
+                          <input onclick="event.preventDefault(); document.querySelector('#checked-{{ $command->id }}').submit()" type="checkbox" value="{{ !$command->checked}}" name="check" class="opacity-0 absolute cursor-pointer" @if($command->checked) checked @endif>
                           <svg class="fill-current hidden w-3 h-3 text-green-500" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
-                      </div>
+                        </div>
+                      </form>  
                   </div>
                 </td>
               </tr>
@@ -248,11 +252,6 @@
                 </div>
               </div>
           </main>
-
-  <div class="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
-    <input type="checkbox" class="opacity-0 absolute">
-    <svg class="fill-current hidden w-4 h-4 text-green-500" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
-  </div>
          
            {{--  <hr class="border-b m-0" /> --}}
             <footer class="bg-gray-200 text-gray-600 text-sm font-medium border-t p-5 text-center">
