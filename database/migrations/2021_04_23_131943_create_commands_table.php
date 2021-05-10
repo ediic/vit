@@ -18,9 +18,9 @@ class CreateCommandsTable extends Migration
             $table->string('username');
             $table->string('location');
             $table->string('destination');
-            $table->integer('phone');
-            $table->string('email');
-            $table->mediumText('message');
+            $table->string('phone');
+            $table->string('email')->nullable();
+            $table->mediumText('message')->nullable();
             $table->boolean('checked')->default(false);
             $table->timestamps();
         });
