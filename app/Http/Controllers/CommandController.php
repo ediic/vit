@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Command;
+use Illuminate\Support\Facades\Gate;
 
 class CommandController extends Controller
 {
@@ -26,8 +27,10 @@ class CommandController extends Controller
    
    public function index()
    {
-
-   	return view('command_index', ['commands' => Command::all()]);
+      // if (Gate::allows('is-admin')) {
+      // }
+   	
+      return view('command_index', ['commands' => Command::paginate(10)]);
    }
 
 

@@ -117,4 +117,7 @@
         </div>
       </div>
   </main>
+    <div class="mx-auto pb-4">
+      {{ $commands->links() }}
+    </div>
 @endsection

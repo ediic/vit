@@ -55,9 +55,19 @@
                         </svg>
                     
                         <div class="ml-1 relative">
-                            <div>
-                                <a href="{{ route('login') }}" class="text-gray-600 hover:underline pr-3 rounded-md text-sm font-medium">Log in</a>
-                            </div>
+                            @cannot('logged-in')
+                              <div>
+                                  <a href="{{ route('login') }}" class="text-gray-600 hover:underline pr-3 rounded-md text-sm font-medium">Log in</a>
+                              </div>
+                            @endcannot
+                            @can('logged-in')
+                              <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <div>
+                                  <button type="submit" class="text-gray-600 hover:underline pr-3 rounded-md text-sm font-medium">Log out</button>
+                                </div>
+                              </form>
+                            @endcan                            
                           <!--
                             Dropdown menu, show/hide based on menu state.
 
@@ -76,9 +86,6 @@
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
                           </div> --}}
                         </div>
-                      </div>
-                      <div>
-                        <a href="{{ route('logout') }}" class="text-gray-600 hover:underline pr-3 rounded-md text-sm font-medium">Log out</a>
                       </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
