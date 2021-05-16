@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommandController;
+use App\Http\Controllers\OrderMailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::post('/command/store', [CommandController::class, 'store']);
 Route::get('/command/index', [CommandController::class, 'index'])->name('commands.index');
 Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->name('commands.destroy');
 Route::put('/commands/{command}', [CommandController::class, 'update'])->name('commands.update');
+
+Route::get('/email', [OrderMailController::class, 'sendMail'])->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
