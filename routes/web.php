@@ -29,7 +29,7 @@ Route::get('/command/index', [CommandController::class, 'index'])->name('command
 Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->name('commands.destroy');
 Route::put('/commands/{command}', [CommandController::class, 'update'])->name('commands.update');
 
-Route::get('/email', [OrderMailController::class, 'sendMail'])->name('index');
+//Route::get('/email', [OrderMailController::class, 'sendMail'])->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

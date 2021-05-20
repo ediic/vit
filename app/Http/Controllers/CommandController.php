@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Command;
 use Illuminate\Support\Facades\Gate;
+use App\Http\Controllers\OrderMailController;
 
 class CommandController extends Controller
 {
-   public function store(Request $request)
+   public function store(Request $request, OrderMailController $mail)
    {
 		$validated = $request->validate([
 			'username' => 'required|max:255',
@@ -19,7 +20,10 @@ class CommandController extends Controller
 			'message' => 'nullable|alpha_num|max:1000',
 		]);
 
-      Command::create($validated);
+      	Command::create($validated);
+
+      	//$mail = new OrderMailController();
+      	$mail->sendMail($request);
 
 		return back()->with('status', 'Comanda a fost plasata cu succes');
    }

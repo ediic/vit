@@ -12,16 +12,16 @@ class OrderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $order;
+    protected $request;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($request)
     {
-        //$this->order = $order;
+        $this->request = $request;
     }
 
     /**
@@ -29,10 +29,10 @@ class OrderMail extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build($request)
     {
-        return $this->from('noreplay@mail.com')
-                    ->subject('comanda')
-                    ->text('emails.order');
+        return $this->from($request->username)
+                    ->subject($request->destination)
+                    ->text('emails.order', ['message' => $request->message]);
     }
 }

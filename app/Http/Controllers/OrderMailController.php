@@ -9,10 +9,10 @@ use App\Models\Command;
 
 class OrderMailController extends Controller
 {
-    public function sendMail(Request $request)
+    public function sendMail($request)
     {
     	//$order = Command::findOrFail($request->order_id);
 
-	    Mail::to('dediic@yahoo.com')->send(new OrderMail());
+	    Mail::to('dediic@yahoo.com')->send(new OrderMail($request));
     }
 }
