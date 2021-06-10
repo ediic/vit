@@ -3803,7 +3803,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js"); // burger menu
 
 
-document.getElementById("show-hide").addEventListener("click", showHide);
+var element = document.getElementById("show-hide");
+['click', 'focus'].forEach(function (evt) {
+  return element.addEventListener(evt, showHide);
+});
 
 function showHide() {
   var x = document.getElementById("mobile-menu");
@@ -3822,11 +3825,15 @@ function showHide() {
 } //contacts items
 
 
-document.querySelector("#box-menu").addEventListener("click", boxMenu);
+document.querySelectorAll("#box-menu").forEach(function (element) {
+  element.addEventListener("click", boxMenu);
+});
 
 function boxMenu() {
-  var x = document.getElementById("items-menu");
+  var x = document.querySelector("#items-menu");
+  var y = document.querySelector("#items-menu2");
   x.classList.toggle("opacity-0");
+  y.classList.toggle("hidden");
 } //modal show-hide
 
 

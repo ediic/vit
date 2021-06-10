@@ -11580,6 +11580,10 @@ select {
   height: 24rem;
 }
 
+.h-600 {
+  height: 37rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -31436,6 +31440,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+input:checked + svg {
+  display: block;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -42267,6 +42275,10 @@ body {
 
   .sm\:h-96 {
     height: 24rem;
+  }
+
+  .sm\:h-600 {
+    height: 37rem;
   }
 
   .sm\:h-auto {
@@ -72876,6 +72888,10 @@ body {
     height: 24rem;
   }
 
+  .md\:h-600 {
+    height: 37rem;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -103481,6 +103497,10 @@ body {
 
   .lg\:h-96 {
     height: 24rem;
+  }
+
+  .lg\:h-600 {
+    height: 37rem;
   }
 
   .lg\:h-auto {
@@ -134090,6 +134110,10 @@ body {
     height: 24rem;
   }
 
+  .xl\:h-600 {
+    height: 37rem;
+  }
+
   .xl\:h-auto {
     height: auto;
   }
@@ -164695,6 +164719,10 @@ body {
 
   .\32xl\:h-96 {
     height: 24rem;
+  }
+
+  .\32xl\:h-600 {
+    height: 37rem;
   }
 
   .\32xl\:h-auto {

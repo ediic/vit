@@ -3,7 +3,10 @@ require('./bootstrap');
 require('alpinejs');
 
 // burger menu
-document.getElementById("show-hide").addEventListener ("click", showHide);
+const element =  document.getElementById("show-hide");
+
+['click','focus'].forEach( evt => element.addEventListener(evt, showHide));      
+
 function showHide() {
     const x = document.getElementById("mobile-menu");
     const y = document.getElementById("cross-icon");
@@ -21,11 +24,15 @@ function showHide() {
 
 
 //contacts items
-document.querySelector("#box-menu").addEventListener ("click", boxMenu);
+document.querySelectorAll("#box-menu").forEach(element => {element.addEventListener("click", boxMenu)});
+
 function boxMenu() {
-    const x = document.getElementById("items-menu");
+    const x = document.querySelector("#items-menu");
+    const y = document.querySelector("#items-menu2");
+
     x.classList.toggle("opacity-0");
-}
+    y.classList.toggle("hidden");
+}      
 
 
 //modal show-hide

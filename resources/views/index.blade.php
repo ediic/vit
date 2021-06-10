@@ -1,17 +1,22 @@
 @extends('layouts.layout')
 
 @section('content')
-    <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-gray-900 text-center">
-                Servicii auto de transport intern si international
-            </h1>
-        </div>
-    </header>
+    <main class="min-h-screen">
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-gray-900 text-center">
+                    VIT-TRANS-SERVICE 
+                </h2>
+                <h2 class="text-2xl font-bold text-gray-900 text-center">
+                    Servicii auto de transport intern si international
+                </h2>
+              
+            </div>
+        </header>
 
-    @include('partials.flash')
+        @include('partials.flash')
 
-    <main class="flex-1">
+        
         {{-- <div class="max-w-full border-2 border-black">
             <div class="p-1">
                 <img class="object-cover w-full" src="{{ asset('storage/vit.jpg') }}">
@@ -19,14 +24,15 @@
         </div> --}}
         <div class="flex flex-col md:flex-row items-center max-w-7xl h-full mx-auto">
             
-            <div class="w-3/4 h-3/4 rounded-lg shadow-lg overflow-hidden">
-                <img src="{{ asset('storage/vit.jpg') }}"class="border-none w-full h-full"/>
+            <div class="w-4/5 h-auto md:h-600">
+                <img src="{{ asset('storage/vit.jpg') }}" class="border-none w-full h-3/5 md:h-4/5 lg:h-full rounded-lg shadow-lg overflow-hidden" />
             </div>
 
             <!-- component -->
             <div class="bg-white w-96 ml-2 mt-2 shadow-md">
                 <div class="py-8 px-8 rounded-xl">
                     <h1 class="font-medium text-2xl text-center">Comanda transport</h1>
+                    <hr>
                     <form method="POST" action="/command/store" class="mt-6">
                         @csrf
                         <div class="my-5 text-sm">
@@ -82,8 +88,25 @@
                     </form>
                 </div>
             </div>
-
         </div>
-
     </main>
+
+    <div class="bg-gray-100 p-5 mt-2 shadow">
+        <h1 class="font-bold text-gray-900 text-2xl text-center">
+            Autocamioanele noastre
+        </h1>
+    </div>
+    <div class="max-w-7xl mx-auto">
+      <!-- hero -->
+      <div class="hero">
+
+          <section id="photos" class="my-5 grid justify-items-center grid-cols-1 md:grid-cols-2 gap-4">
+              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
+          </section>
+
+      </div>
+    </div>
 @endsection

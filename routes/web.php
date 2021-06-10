@@ -20,14 +20,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/gallery', function () {
-    return view('gallery');
-});
+// Route::get('/gallery', function () {
+//     return view('gallery');
+// });
 
 Route::post('/command/store', [CommandController::class, 'store']);
-Route::get('/command/index', [CommandController::class, 'index'])->name('commands.index');
-Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->name('commands.destroy');
-Route::put('/commands/{command}', [CommandController::class, 'update'])->name('commands.update');
+Route::get('/command/index', [CommandController::class, 'index'])->middleware('auth.isAdmin')->name('commands.index');
+Route::delete('/commands/{id}', [CommandController::class, 'destroy'])->middleware('auth.isAdmin')->name('commands.destroy');
+Route::put('/commands/{command}', [CommandController::class, 'update'])->middleware('auth.isAdmin')->name('commands.update');
 
 //Route::get('/email', [OrderMailController::class, 'sendMail'])->name('index');
 
