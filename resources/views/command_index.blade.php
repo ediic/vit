@@ -59,8 +59,8 @@
     </table> 
       <!-- modal -->
       <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40">
-        <div class="border border-blue-500 shadow-lg modal-container bg-white lg:w-4/12 md:max-w-11/12 mx-auto rounded-xl shadow-lg my-5">
-          <div class="modal-content py-4 text-left px-6">
+        <div class="border border-blue-500 shadow-lg modal-container bg-white w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 mx-auto rounded-xl shadow-lg my-5">
+          <div class="modal-content py-4 text-left px-6 z-50">
             <!--Title-->
             <div class="flex justify-between items-center pb-3">
               <p class="text-2xl font-bold text-gray-500">Vizualizare</p>

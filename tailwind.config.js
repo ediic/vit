@@ -14,7 +14,10 @@ module.exports = {
             },
             height: {
                 600: '37rem',
-            },   
+            },
+            zIndex: {
+             '-10': '-10',
+            },               
         },
     },  
 
