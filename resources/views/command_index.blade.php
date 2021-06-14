@@ -58,9 +58,9 @@
     @endforeach
     </table> 
       <!-- modal -->
-      <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40">
+      <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40 z-10">
         <div class="border border-blue-500 shadow-lg modal-container bg-white w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 mx-auto rounded-xl shadow-lg my-5">
-          <div class="modal-content py-4 text-left px-6 z-50">
+          <div class="modal-content py-4 text-left px-6 z-10">
             <!--Title-->
             <div class="flex justify-between items-center pb-3">
               <p class="text-2xl font-bold text-gray-500">Vizualizare</p>
@@ -79,32 +79,32 @@
                 <div class="">
                   <label class="text-md text-gray-600">Numele</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
                 <div class="">
                   <label class="text-md text-gray-600">Locatia</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
                 <div class="">
                   <label class="text-md text-gray-600">Destinatia</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
                 <div class="">
                   <label class="text-md text-gray-600">Telefon</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
                 <div class="">
                   <label class="text-md text-gray-600">Email</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
                 <div class="">
                   <label class="text-md text-gray-600">Mesaj</label>
                 </div>
-                <div class="modal-item h-12 p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
+                <div class="modal-item h-auto p-3 w-full border-2 border-gray-300 mb-5 rounded-md text-gray-500">
                 </div>
               </div>
             </div>
