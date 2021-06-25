@@ -15,8 +15,8 @@
         {{-- <script src="{{ asset('js/app1.js') }}" defer></script> --}}
     </head>
 
-    <body class="antialiased">
-        <div class="flex flex-col h-screen">
+    <body class="antialiased h-screen">
+        <div class="flex flex-col">
             <nav class="bg-gray-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div class="flex items-center justify-between h-20">
