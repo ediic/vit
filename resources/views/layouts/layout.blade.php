@@ -17,7 +17,7 @@
 
     <body class="antialiased h-screen">
         <div class="flex flex-col">
-            <nav class="bg-gray-100">
+            <nav class="bg-gray-100 sticky top-0 z-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div class="flex items-center justify-between h-20">
                     <div class="flex items-center">
@@ -43,9 +43,9 @@
                                   </div>
                                   <div id="items-menu" class="absolute mt-1 left-0 top-full min-w-max shadow rounded bg-gray-100 border border-gray-400 transition delay-75 ease-in-out z-10 opacity-0">
                                       <ul class="block text-gray-600">
-                                          <li class="px-3 py-2">Chisinau, str.Sarmizegeduza 28/1</li>
+                                          <li class="px-3 py-2">Chisinau, str.Sarmizegetusa 53</li>
                                           <li class="px-3 py-2">tel.067573620</li>
-                                          <li class="px-3 py-2">service@mail.md</li>
+                                          <li class="px-3 py-2">vit-trans-service@mail.ru</li>
                                       </ul>
                                   </div>
                                 </div>
@@ -179,7 +179,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <div class="ml-2 mr-10 text-gray-600 text-sm font-semibold">service@mail.com</div>
+                    <div class="ml-2 mr-10 text-gray-600 text-sm font-semibold">vit-trans-service@mail.ru</div>
                   </div>
                 </div>                
             </footer>
