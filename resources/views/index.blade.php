@@ -93,20 +93,62 @@
 
     <div class="bg-gray-100 p-5 mt-2 shadow">
         <h1 class="font-bold text-gray-900 text-2xl text-center">
-            Autocamioanele noastre
+            La dispozitia dumneavoastra urmatoarele servicii
         </h1>
     </div>
-    <div class="max-w-7xl mx-auto">
-      <!-- hero -->
-      <div class="hero">
 
-          <section id="photos" class="my-5 grid justify-items-center grid-cols-1 md:grid-cols-2 gap-4">
-              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
-              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
-              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
-              <img src="{{ asset('storage/vit.jpg') }}" class="w-full h-80 hover:opacity-75"/>
-          </section>
+    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-7">
+        <!--Card 1-->
+        <div class="rounded overflow-hidden shadow-lg pb-5">
+          <img class="w-3/5 mx-auto" src="{{ asset('storage/1bus.jpg') }}" alt="Truck">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-center">PINA LA 2 TONE</div>
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">PRIN ORAS</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 160 Lei/ora
+            </p>
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-3">IN AFARA ORASULUI</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 5 Lei/km
+            </p>            
+          </div>
+        </div>
+        <!--Card 2-->
+        <div class="rounded overflow-hidden shadow-lg">
+          <img class="w-3/5 mx-auto" src="{{ asset('storage/2bus.jpg') }}" alt="Truck">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-center">PINA LA 3 TONE</div>
+            <p class="text-gray-700 text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#summer</span>
+          </div>
+        </div>
 
+        <!--Card 3-->
+        <div class="rounded overflow-hidden shadow-lg">
+          <img class="w-3/5 mx-auto" src="{{ asset('storage/3bus.jpg') }}" alt="Truck">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 text-center">PINA LA 5 TONE</div>
+            <p class="text-gray-700 text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
+          </div>
+        </div>
       </div>
     </div>
 @endsection
+
