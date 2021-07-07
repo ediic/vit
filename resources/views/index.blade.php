@@ -91,7 +91,7 @@
         </div>
     </main>
 
-    <div class="bg-gray-100 p-5 mt-2 shadow">
+    <div class="bg-gray-100 p-5 mt-6 shadow">
         <h1 class="font-bold text-gray-900 text-2xl text-center">
             La dispozitia dumneavoastra urmatoarele servicii
         </h1>
@@ -122,14 +122,18 @@
           <img class="w-3/5 mx-auto" src="{{ asset('storage/2bus.jpg') }}" alt="Truck">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2 text-center">PINA LA 3 TONE</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">PRIN ORAS</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 190 Lei/ora
             </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#summer</span>
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-3">IN AFARA ORASULUI</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 6 Lei/km
+            </p> 
           </div>
         </div>
 
@@ -138,15 +142,18 @@
           <img class="w-3/5 mx-auto" src="{{ asset('storage/3bus.jpg') }}" alt="Truck">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2 text-center">PINA LA 5 TONE</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">PRIN ORAS</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 230 Lei/ora
             </p>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#fall</span>
-          </div>
+            <div class="px-6 pt-4 pb-2 text-center">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-3">IN AFARA ORASULUI</span>
+            </div>            
+            <p class="text-center font-bold">
+              de la 7 Lei/km
+            </p> 
         </div>
       </div>
     </div>
