@@ -39,8 +39,8 @@
               <div class="ml-10 flex items-center space-x-4">
                 <a href="{{ url('/') }}" class="text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <!-- This is an example component -->
-                <div class="relative text-gray-600 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-md text-base font-medium">
-                  <div id="box-menu" class="cursor-pointer">  
+                <div class="relative">
+                  <div id="box-menu" class="cursor-pointer hover:bg-gray-500 hover:text-white px-3 py-2 text-gray-600 rounded-md text-base font-medium">  
                     <span>Contacte</span>
                     <svg class="h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -192,6 +192,27 @@
                   </div>
                 </div>                
               </footer>
-            </div>   
+            </div>
+              <script type="text/javascript">
+                document.querySelectorAll("#box-menu").forEach(element => {element.addEventListener("click", boxMenu)});
+                document.querySelectorAll("#box-menu").forEach(element => {element.addEventListener("onblur", boxMenuHidden)});
+
+                function boxMenu() {
+                    const x = document.querySelector("#items-menu");
+                    const y = document.querySelector("#items-menu2");
+
+                    x.classList.toggle("opacity-0");
+                    y.classList.toggle("hidden");
+                }      
+                
+                function boxMenuHidden() {
+                    const x = document.querySelector("#items-menu");
+                    const y = document.querySelector("#items-menu2");
+
+                    x.classList.toggle("opacity-0");
+                    y.classList.toggle("hidden");
+                }      
+                
+              </script>   
           </body>
           </html>

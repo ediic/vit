@@ -34,7 +34,7 @@ class CommandController extends Controller
       // if (Gate::allows('is-admin')) {
       // }
    	
-      return view('command_index', ['commands' => Command::paginate(10)]);
+      return view('command_index', ['commands' => Command::latest()->paginate(10)]);
    }
 
 
