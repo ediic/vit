@@ -3828,12 +3828,20 @@ function showHide() {
 document.querySelectorAll("#box-menu").forEach(function (element) {
   element.addEventListener("click", boxMenu);
 });
+document.querySelector("main").addEventListener('click', boxHideMenu);
 
 function boxMenu() {
   var x = document.querySelector("#items-menu");
   var y = document.querySelector("#items-menu2");
   x.classList.toggle("opacity-0");
   y.classList.toggle("hidden");
+}
+
+function boxHideMenu() {
+  var x = document.querySelector("#items-menu");
+  var y = document.querySelector("#items-menu2");
+  x.classList.add("opacity-0");
+  y.classList.add("hidden");
 } //modal show-hide
 
 

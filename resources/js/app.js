@@ -25,6 +25,7 @@ function showHide() {
 
 //contacts items
 document.querySelectorAll("#box-menu").forEach(element => {element.addEventListener("click", boxMenu)});
+document.querySelector("main").addEventListener('click', boxHideMenu);
 
 function boxMenu() {
     const x = document.querySelector("#items-menu");
@@ -33,6 +34,14 @@ function boxMenu() {
     x.classList.toggle("opacity-0");
     y.classList.toggle("hidden");
 }      
+
+function boxHideMenu() {  
+    const x = document.querySelector("#items-menu");
+    const y = document.querySelector("#items-menu2");
+
+    x.classList.add("opacity-0");
+    y.classList.add("hidden");                  
+}  
 
 
 //modal show-hide
