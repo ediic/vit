@@ -58,7 +58,7 @@
     @endforeach
     </table> 
       <!-- modal -->
-      <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40 z-10">
+      <div class="modal-open hidden fixed overflow-y-auto w-full inset-0 bg-gray-600 bg-opacity-40 z-50">
         <div class="border border-blue-500 shadow-lg modal-container bg-white w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 mx-auto rounded-xl shadow-lg my-5">
           <div class="modal-content py-4 text-left px-6 z-10">
             <!--Title-->
