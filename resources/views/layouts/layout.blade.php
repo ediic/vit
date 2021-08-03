@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Servicii de transport marfuri">
 
   <title>VitTransServ</title>
 
@@ -59,7 +60,7 @@
             <div class="ml-2 mr-4 text-gray-600 text-base font-semibold">069213521</div>
             <div class="flex-shrink-0">
               <a target="_blank" href="https://www.facebook.com/VitTransService">
-                <img class="h-6" src="{{ asset('storage/fb.svg') }}">
+                <img class="h-8" src="{{ asset('storage/fb.svg') }}">
               </a>  
             </div>              
           </div>
@@ -68,7 +69,7 @@
             <div class="ml-4 flex items-center md:ml-6 ">
               <div class="flex-shrink-0 mr-10">
                 <a target="_blank" href="https://www.facebook.com/VitTransService">
-                  <img class="h-6" src="{{ asset('storage/fb.svg') }}">
+                  <img class="h-8" src="{{ asset('storage/fb.svg') }}">
                 </a>  
               </div>              
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

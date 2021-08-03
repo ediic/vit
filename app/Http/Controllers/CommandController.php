@@ -18,7 +18,7 @@ class CommandController extends Controller
 			'destination' => 'required|max:255',
 			'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:30',
 			'email' => 'nullable|email|max:255',
-			'message' => 'nullable|alpha_num|max:1000',
+			'message' => 'nullable|max:1000',
 		]);
 
    	Command::create($validated);
